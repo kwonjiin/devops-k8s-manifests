@@ -17,18 +17,17 @@ pipeline {
                     sh 'cat deploy.yaml'
                 }
             }
-
-            stage('Commit & Push') {
-                steps {
-                    sh 'git config --list'
-                    sh 'git config user.name "kwonjimiin"'
-                    sh 'git config user.email "jimin001006@naver.com"'
-                    sh 'git config --list'
-                    sh 'git add .'
-                    sh "git commit -m 'Update Image Version ${params.DOCKER_IMAGE_VERSION}'"
-                    sh 'git status'
-                    sh 'git push'
-                }
+        }
+        stage('Commit & Push') {
+            steps {
+                sh 'git config --list'
+                sh 'git config user.name "kwonjimiin"'
+                sh 'git config user.email "jimin001006@naver.com"'
+                sh 'git config --list'
+                sh 'git add .'
+                sh "git commit -m 'Update Image Version ${params.DOCKER_IMAGE_VERSION}'"
+                sh 'git status'
+                sh 'git push'
             }
         }
     }
