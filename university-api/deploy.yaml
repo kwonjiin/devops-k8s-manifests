@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: university-api
-        image: university-api:22
+        image: university-api:24
         resources:
           requests:
             memory: "128Mi"
