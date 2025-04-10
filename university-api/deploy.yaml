@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: university-api
-        image: university-api:23
+        image: kwonjimiin/university-api:23
         resources:
           requests:
             memory: "128Mi"
